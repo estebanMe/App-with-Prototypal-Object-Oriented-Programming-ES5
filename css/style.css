@@ -1,0 +1,12 @@
+.cancel {
+    margin-left: 20px;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+table td button {
+    background: transparent;
+    border: none;
+}
