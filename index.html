@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Administración de empleados</title>
+    <!-- Bootstrap -->
+    <link href="vendor/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <h3>Administración de empleados</h3>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <form id="myForm">
+                    <div id="contentNumberEmployee" class="form-group hidden">
+                        <label for="idEmployee">Número de Empleado</label>
+                        <input type="hidden" name="idEmployee" class="form-control" id="idEmployee" value="0" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Apellido</label>
+                        <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Apellido">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Edad</label>
+                        <input type="text" name="age" class="form-control" id="age" placeholder="Edad">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="text" name="phone" class="form-control" id="phone" placeholder="Teléfono">
+                    </div>
+                    <div class="form-group">
+                        <label for="speciality">Especialidad</label>
+                        <select class="form-control" name="speciality" id="speciality">
+                                    <option value="">Seccione una Especialidad</option>
+                                    <option value="Software Developer">Software Developer</option>
+                                    <option value="Web Developer">Web Developer</option>
+                        </select>
+                    </div>
+                    <button id="submit" type="submit" class="btn btn-success">Guardar</button>
+                </form>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <table id="listEmploye" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nro Emp</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Edad</th>
+                            <th>Teléfono</th>
+                            <th>Especialidad</th>
+                            <th>Eliminar</th>
+                            <th>Editar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="vendor/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="js/myApp.js"></script>
+    <script src="js/employee.js"></script>
+    <script>
+        var app = new MyApp();
+        app.initialize();
+    </script>
+
+</body>
+
+</html>
